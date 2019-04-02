@@ -12,7 +12,7 @@ from fastai.vision import *
 export_file_url = 'https://drive.google.com/uc?export=download&id=15bL9zBH2hByizcyjq_ggsYmraKYGzmP'
 export_file_name = 'export.pkl'
 
-classes = ['monet', 'manet']
+classes = ['manet', 'monet']
 path = Path(__file__).parent
 
 app = Starlette()
