@@ -24,10 +24,7 @@ function analyze() {
     xhr.onload = function(e) {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
-            if response['result'] == 'monet':
-                el('result-label').innerHTML = `This artwork belongs to Claude Monet!`;
-            else:
-                el('result-label').innerHTML = `This artwork belongs to Édouard Manet!`;
+            el('result-label').innerHTML = `This is artwork belongs to ${response['result']}!`;
         }
         el('analyze-button').innerHTML = 'Analyze';
     }
@@ -36,4 +33,3 @@ function analyze() {
     fileData.append('file', uploadFiles[0]);
     xhr.send(fileData);
 }
-
